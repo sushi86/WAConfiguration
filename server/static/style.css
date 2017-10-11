@@ -1,0 +1,13 @@
+html {
+    margin: 10px
+}
+h1 {
+    margin-bottom: 35px;
+}
+#main {
+    width: 400px;
+    margin: auto;
+}
+
+.input-class {
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp configuration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <h1>Whatsapp configuration</h1>
+
+        <div id="step-1">
+            <form onsubmit="step1(); return false;" action="">
+                <div class="form-group input-class">
+                    <p><label for="number">telephone number</label></p>
+                    <p><input type="text" id="number" name="number" class="form-control" placeholder="insert telephone number here (491231231)"></p>
+                </div>
+                <div class="form-group">
+                    <label for="authKind">Select authentication method</label>
+                    <select class="form-control" id="authKind">
+                        <option>sms</option>
+                        <option>voice</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+        <div id="step-2" style="display: none">
+            <form>
+                <div class="form-group input-class">
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="password" class="form-control" placeholder="123-567">
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
