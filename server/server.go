@@ -2,9 +2,9 @@ package server
 
 import (
 	"net/http"
-	"fmt"
 	"io/ioutil"
 	"encoding/json"
+	"github.com/sushi86/WAConfiguration/command"
 )
 
 type message struct {
@@ -32,8 +32,6 @@ func api(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println(string(b))
-
 	var msg message
 
 	err = json.Unmarshal(b, &msg)
@@ -42,5 +40,8 @@ func api(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if msg.Step == "step1" {
+		command.Register(msg.Data, "sms")
+	}
 	
 }
